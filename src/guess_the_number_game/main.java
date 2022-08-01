@@ -2,6 +2,8 @@ package guess_the_number_game;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class main {
 	public static void main(String[] args) {
@@ -9,10 +11,15 @@ public class main {
 		Random dice = new Random();
 		
 		int answer, guess, counter;	
-		String userInput;	
+		String userInput;
+
+		LocalDate today = LocalDate.now();
+		LocalTime time = LocalTime.now();
 		
 		answer = 1 + dice.nextInt(100);		
 		
+		System.out.println("today is " + today);
+		System.out.println("now it's " + time);
 		System.out.println("Welcome to the guessing game!\r\n");
 		System.out.println("Rules:");
 		System.out.println("- The game will have a number that should be guessed. For example, 36.\r\n"
@@ -47,4 +54,3 @@ public class main {
 		}
 	}
 }	
-
